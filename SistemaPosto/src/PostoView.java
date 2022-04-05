@@ -1,4 +1,4 @@
-//LUAN MODESTO
+
 
 import java.text.DecimalFormat;
 import java.awt.event.*;
