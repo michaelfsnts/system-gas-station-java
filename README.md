@@ -1,26 +1,71 @@
-## system-gas-station-java ⛽
------
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 
 
-Nesse repositório está armazenado um sistema construído em *JAVA*, onde sua função está em simular um sistema de Posto de Gasolina.
 
-O sistema simula a função de vendas na loja de convenviência, abastecimento do carro do cliente e abastecimentos da bombas de combustíveis. 
+# Sistema de Gerenciamento de Posto de Gasolina ⛽
 
-Ao abastecer o carro do cliente o sistema entende que foram utilizados certa quantidade na sua reserva (Bombas de combustíveis). 
-
-*Exemplo: A bomba tem 100 litros de gasolina, e foi vendido 20lts. O sistema logo indicará ao frentista que naquela bomba agora ela possui somente 80 litros de gasolina*
-
-A cada venda na convenviência um valor é adicionado na venda final.
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 
 ---
 
-#### Trabalho realizado para fins de estudos pela Universidade Guarulhos 📘
+## Visão Geral
+Este projeto é um sistema desktop desenvolvido em **Java** para simular a operação de um posto de gasolina, incluindo:
+- Vendas na loja de conveniência
+- Abastecimento de veículos
+- Controle de estoque das bombas de combustíveis
 
-#### Todo projeto foi orientado pelo Professor João Ortiz. 👨‍🏫
+O sistema permite registrar vendas, controlar o estoque de combustíveis (com atualização automática após cada abastecimento) e calcular o lucro das operações.
 
-### Autores desse projeto 👩‍💻
+**Exemplo:** Se a bomba possui 100 litros de gasolina e são vendidos 20 litros, o sistema atualiza automaticamente o estoque para 80 litros.
 
-#### *Michael Ferreira* | *Luan Modesto*
+---
+
+## Funcionalidades
+- Interface gráfica (Swing)
+- Controle de estoque de combustíveis
+- Registro de vendas de combustíveis e serviços adicionais (ducha, troca de óleo, balanceamento, café)
+- Relatórios de vendas e lucros
+- Simulação de reabastecimento das bombas
+
+---
+
+## Estrutura do Projeto
+
+```
+src/
+	PostoView.java        # Interface principal do sistema
+	PostoVO.java          # Lógica e dados do posto (estoque, vendas, lucros)
+	RelatorioView.java    # Tela de relatórios
+	SistemaPosto.java     # Classe principal (main)
+build.xml               # Script de build (Ant)
+manifest.mf             # Manifesto do projeto
+nbproject/              # Configurações do NetBeans
+```
+
+---
+
+## Requisitos
+- Java 8 ou superior
+- (Opcional) NetBeans para facilitar o build e execução
+
+---
+
+## Como Executar
+1. Compile o projeto:
+	 - Usando o NetBeans: basta abrir o projeto e clicar em "Executar".
+	 - Usando o terminal (Ant):
+		 ```sh
+		 ant clean
+		 ant jar
+		 java -jar dist/SistemaPosto.jar
+		 ```
+2. Siga as instruções na interface gráfica.
+
+---
+
+## Créditos
+- Trabalho acadêmico para a Universidade Guarulhos 📘
+- Orientação: Prof. João Ortiz 👨‍🏫
+- Autores: *Michael Ferreira* | *Luan Modesto*
 
